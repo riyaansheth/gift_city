@@ -6,7 +6,7 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("visible");
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.2 });
 
 reveals.forEach(el => observer.observe(el));
 

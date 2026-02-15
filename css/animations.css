@@ -1,28 +1,28 @@
 .animated-background {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-    -45deg,
-    #f3efe9,
-    #efe6d8,
-    #f6f1eb,
-    #e9dfcf
-  );
-  background-size: 400% 400%;
-  animation: gradientFlow 18s ease infinite;
-  z-index: -1;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, #fff3e0, transparent 40%),
+    radial-gradient(circle at 80% 30%, #f1e1c6, transparent 45%),
+    radial-gradient(circle at 50% 80%, #e6d3b1, transparent 40%),
+    linear-gradient(120deg, #f6efe6, #efe2cf);
+  animation: backgroundDrift 25s ease-in-out infinite alternate;
 }
 
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes backgroundDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 1s ease;
 }
 
 .reveal.visible {
