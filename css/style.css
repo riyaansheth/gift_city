@@ -1,0 +1,9 @@
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}

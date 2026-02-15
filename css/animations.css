@@ -1,0 +1,31 @@
+.animated-background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    #f3efe9,
+    #efe6d8,
+    #f6f1eb,
+    #e9dfcf
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
