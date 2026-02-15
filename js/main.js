@@ -12,6 +12,8 @@ reveals.forEach(el => observer.observe(el));
 
 const card = document.getElementById("companyCard");
 
-card.addEventListener("click", () => {
-  card.classList.toggle("flipped");
-});
+if (card) {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+}
