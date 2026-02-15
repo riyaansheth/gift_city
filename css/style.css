@@ -1,9 +1,123 @@
-.product-card img {
-    height: 250px;
-    object-fit: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.product-card {
-    border: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #2e2e2e;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  max-width: 520px;
+  margin: auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.about {
+  padding: 100px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.company-card-section {
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-wrapper {
+  perspective: 1200px;
+}
+
+.company-card {
+  width: 320px;
+  height: 220px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.company-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.card-front {
+  text-align: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-size: 0.9rem;
+}
+
+.card-hint {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.catalogue-btn {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #3c3c3c;
+  color: white;
 }
