@@ -8,6 +8,13 @@ body {
   font-family: "Segoe UI", sans-serif;
   color: #2e2e2e;
   overflow-x: hidden;
+  background: transparent;
+}
+
+section {
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -195,4 +202,3 @@ body {
   font-size: 1.8rem;
   letter-spacing: 1px;
 }
-
